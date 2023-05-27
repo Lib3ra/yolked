@@ -17,15 +17,17 @@ model Post {
   createdAt DateTime @default(now())
   content   String   @db.VarChar(255)
   authorId  String
+
   @@index([authorId])
 }
 
 model ExerciseModule {
-  id           String @id @default(cuid())
-  repRange     Int
-  numberOfSets Int
-  exerciseName String
-  userId       String
+  id            String @id @default(cuid())
+  repRange      Int
+  numberOfSets  Int
+  exerciseName  String
+  exerciseNotes String
+  userId        String
+
   @@index([userId])
 }
-
