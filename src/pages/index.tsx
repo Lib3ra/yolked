@@ -6,7 +6,7 @@ import { api } from "~/utils/api";
 const Home: NextPage = () => {
   const { data, isLoading } = api.posts.getAll.useQuery();
   const user = useUser();
-  if (isLoading) return <div> Loading ...</div>;
+  if (isLoading) return <div> Test change </div>;
 
   if (!data) return <div> Something went wrong</div>;
   console.log;
